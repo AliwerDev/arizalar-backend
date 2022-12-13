@@ -5,7 +5,8 @@ require("./start/middleware")(app);
 
 // const mongoURL =
 //   "mongodb+srv://vercel-admin-user:nw6x60RgXCAjb3Q1@cluster0.6kysb.mongodb.net/application";
-const mongoURL = "mongodb://localhost:27017/application";
+const mongoURL =
+  "mongodb+srv://vercel-admin-user:nw6x60RgXCAjb3Q1@cluster0.6kysb.mongodb.net/arizalar";
 
 mongoose.connect(mongoURL, { useUnifiedTopology: true }).then(() => {
   console.log("success mongodb connect");
