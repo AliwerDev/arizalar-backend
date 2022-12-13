@@ -7,7 +7,11 @@ const serviceRoutes = require("../routers/services");
 
 module.exports = function (app) {
   app.use(express.json());
-  app.use(cors());
+  app.use(
+    cors({
+      origin: ["*", "https://www.google.com/"],
+    })
+  );
   app.use("/", homeRotes);
   app.use("/api/auth", authRoutes);
   app.use("/api/application", applicationRoutes);
